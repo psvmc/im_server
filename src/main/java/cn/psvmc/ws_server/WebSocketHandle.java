@@ -1,13 +1,11 @@
 package cn.psvmc.ws_server;
 
-import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker;
-import io.netty.util.CharsetUtil;
 
 public class WebSocketHandle extends SimpleChannelInboundHandler<Object> {
     private WebSocketServerHandshaker handshaker;
