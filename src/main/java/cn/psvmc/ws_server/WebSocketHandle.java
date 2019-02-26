@@ -5,10 +5,8 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.websocketx.BinaryWebSocketFrame;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
-import io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker;
 
 public class WebSocketHandle extends SimpleChannelInboundHandler<Object> {
-    private WebSocketServerHandshaker handshaker;
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
@@ -37,7 +35,7 @@ public class WebSocketHandle extends SimpleChannelInboundHandler<Object> {
     }
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        super.channelRead(ctx, msg);
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        super.exceptionCaught(ctx, cause);
     }
 }
